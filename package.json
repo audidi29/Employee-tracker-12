@@ -1,0 +1,18 @@
+{
+  "type": "module",
+  "name": "your-project-name",
+  "version": "1.0.0",
+  "description": "Your project description",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "console": "^0.7.2",
+    "console.table": "^0.10.0",
+    "inquirer": "^9.2.11",
+    "mysql2": "^3.6.2",
+    "nodemon": "^3.0.1",
+    "table": "^6.8.1"
+  }
+}
