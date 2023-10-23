@@ -334,24 +334,40 @@ async function employeeTracker() {
 }
 
 // Function to view all employees
+// Function to view all employees
 async function viewallemployees() {
-  const [rows] = await db.query('SELECT * FROM employee');
-  console.table(rows);
-  employeeTracker();
+  try {
+    const [rows] = await db.query('SELECT * FROM employees');
+    console.table(rows);
+    employeeTracker();
+  } catch (error) {
+    console.error('Error viewing employees:', error);
+    employeeTracker();
+  }
 }
 
 // Function to view all departments
 async function viewalldepartments() {
-  const [rows] = await db.query('SELECT * FROM department');
-  console.table(rows);
-  employeeTracker();
+  try {
+    const [rows] = await db.query('SELECT * FROM departments');
+    console.table(rows);
+    employeeTracker();
+  } catch (error) {
+    console.error('Error viewing departments:', error);
+    employeeTracker();
+  }
 }
 
 // Function to view all roles
 async function viewallroles() {
-  const [rows] = await db.query('SELECT * FROM role');
-  console.table(rows);
-  employeeTracker();
+  try {
+    const [rows] = await db.query('SELECT * FROM roles');
+    console.table(rows);
+    employeeTracker();
+  } catch (error) {
+    console.error('Error viewing roles:', error);
+    employeeTracker();
+  }
 }
 
 // Function to add a department
